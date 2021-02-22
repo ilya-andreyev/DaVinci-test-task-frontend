@@ -26,7 +26,12 @@
     ],
     "max-lines-per-function": [
       "error",
-      { "max": 80, "skipComments": true, "skipBlankLines": true, "IIFEs": true }
+      {
+        "max": 80,
+        "skipComments": true,
+        "skipBlankLines": true,
+        "IIFEs": true
+      }
     ],
     "no-multiple-empty-lines": [
       "error",
@@ -62,7 +67,9 @@
     "react/no-unsafe": "error",
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": 0,
-    "react/jsx-key": 1
+    "react/jsx-key": 1,
+    "no-console": ["warn", { "allow": ["error"] }],
+    "no-nested-ternary": "off"
   },
   "settings": {
     "import/resolver": {
