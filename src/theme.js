@@ -2,17 +2,12 @@ const getColors = () => ({
   white: '#FFF',
   black: '#333',
   yellow: '#FFFFDD',
-  gray: '#D5D5D5',
+  gray1: '#D5D5D5',
+  gray2: '#EEEEEE',
   whiteTransparent: 'rgba(255, 255, 255, .2)',
   blue1: '#3E5B76',
   blue2: '#628DB6',
-});
-
-const getBreakpoints = () => ({
-  big: '1500px',
-  big2: '1120px',
-  middle: '1000px',
-  small: '600px',
+  blue3: '#169',
 });
 
 const getShadows = () => ({
@@ -23,7 +18,6 @@ const getShadows = () => ({
 
 const theme = {
   colors: { ...getColors() },
-  breakpoints: { ...getBreakpoints() },
   shadows: { ...getShadows() },
 };
 

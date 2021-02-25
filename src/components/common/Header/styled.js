@@ -2,7 +2,6 @@ import styled from 'styled-components/macro';
 
 export const Wrapper = styled.div`
   white-space: nowrap;
-  grid-column: 1 / -1;
 `;
 
 export const WrapperTopMenu = styled.div`
@@ -54,17 +53,18 @@ export const WrapperHeader = styled.div`
 `;
 
 export const H3 = styled.h3`
-  color: ${({ theme }) => theme.colors.white};
   align-self: center;
+  color: ${({ theme }) => theme.colors.white};
+  margin-left: 10px;
 `;
 
 export const Navigation = styled.div`
+  align-items: center;
   align-self: end;
   display: grid;
   gap: 5px;
   grid-auto-flow: column;
   justify-content: start;
-  align-items: center;
   margin-left: 10px;
 `;
 
@@ -78,14 +78,14 @@ export const Paragraph = styled.p`
 
 export const Link = styled.span`
   background-color: ${({ theme, active }) => (active ? theme.colors.white : '')};
+  border-radius: 3px 3px 0 0;
   color: ${({ theme, active }) => (active ? theme.colors.black : theme.colors.white)};
   cursor: pointer;
-  border-radius: 3px 3px 0 0;
-  height: 100%;
   font-size: 12px;
+  font-weight: bold;
+  height: 100%;
   padding: 4px 10px;
   text-decoration: none;
-  font-weight: bold;
 
   &:hover {
     background-color: ${({ theme, active }) => (active ? '' : theme.colors.whiteTransparent)};

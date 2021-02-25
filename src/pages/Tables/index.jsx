@@ -1,21 +1,19 @@
 import MetaDecorator from 'components/common/MetaDecorator';
 import Header from 'components/common/Header';
-import Sprints from 'components/DashboardComponents/Sprints';
-import Issues from 'components/DashboardComponents/Issues';
 import Sidebar from 'components/common/Sidebar';
+import Table from 'components/TablesComponents/Table';
 
 import * as Style from './styled';
 
-const Dashboard = () => (
+const Tables = () => (
   <Style.Wrapper>
-    <MetaDecorator title="Dashboard" />
+    <MetaDecorator title="Dashboard - Tables" />
     <Header />
     <Style.WrapperBody>
-      <Sprints />
-      <Issues />
+      <Table />
       <Sidebar />
     </Style.WrapperBody>
   </Style.Wrapper>
 );
 
-export default Dashboard;
+export default Tables;

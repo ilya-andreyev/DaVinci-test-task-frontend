@@ -6,9 +6,13 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import { GlobalStyle } from 'globalStyled';
 import theme from 'theme';
-import Onboarding from 'pages/Onboarding';
+import Homepage from 'pages/Homepage';
 import Dashboard from 'pages/Dashboard';
-import { ONBOARDING_PATH, DASHBOARD_PATH } from 'constans/paths';
+import Tables from 'pages/Tables';
+import Charts from 'pages/Charts';
+import {
+  HOMEPAGE_PATH, DASHBOARD_PATH, TABLES_PATH, CHARTS_PATH,
+} from 'constans/paths';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,8 +21,10 @@ ReactDOM.render(
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Switch>
-            <Route component={Onboarding} exact path={ONBOARDING_PATH} />
-            <Route component={Dashboard} path={DASHBOARD_PATH} />
+            <Route component={Homepage} exact path={HOMEPAGE_PATH} />
+            <Route component={Dashboard} exact path={DASHBOARD_PATH} />
+            <Route component={Tables} exact path={TABLES_PATH} />
+            <Route component={Charts} exact path={CHARTS_PATH} />
           </Switch>
         </BrowserRouter>
       </ThemeProvider>
