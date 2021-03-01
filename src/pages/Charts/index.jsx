@@ -1,7 +1,7 @@
 import MetaDecorator from 'components/common/MetaDecorator';
 import Header from 'components/common/Header';
 import Sidebar from 'components/common/Sidebar';
-import Chart from 'components/common/Chart';
+import WrapperCharts from 'components/ChartsComponents/WrapperCharts';
 
 import * as Style from './styled';
 
@@ -10,7 +10,7 @@ const Charts = () => (
     <MetaDecorator title="Dashboard - Charts" />
     <Header />
     <Style.WrapperBody>
-      <Chart />
+      <WrapperCharts />
       <Sidebar />
     </Style.WrapperBody>
   </Style.Wrapper>
