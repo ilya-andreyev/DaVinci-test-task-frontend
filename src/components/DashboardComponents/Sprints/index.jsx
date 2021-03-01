@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { formatDistanceToNow } from 'date-fns';
+import ClockLoader from 'react-spinners/ClockLoader';
 
 import { getAllSprints, getVelocity } from 'http/getStatistic';
 import Button from 'components/common/Button';
+import theme from 'theme';
 
 import * as Style from './styled';
 
@@ -62,6 +64,7 @@ const Sprints = () => {
               <Style.Span>{`Created: ${formatDistanceToNow(Date.parse(createdOn))} ago`}</Style.Span>
             </Style.WrapperInfo>
             <Style.WrapperStatistic>
+              <ClockLoader color={theme.colors.blue2} loading={loading[id]} size={50} />
               {sprintVelocity[id] && (
                 <Style.Paragraph>{`Sprint Velocity: ${sprintVelocity[id].velocity}`}</Style.Paragraph>
               )}

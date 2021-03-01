@@ -69,7 +69,8 @@
     "react/react-in-jsx-scope": 0,
     "react/jsx-key": 1,
     "no-console": ["warn", { "allow": ["error"] }],
-    "no-nested-ternary": "off"
+    "no-nested-ternary": "off",
+    "react/display-name": "off"
   },
   "settings": {
     "import/resolver": {

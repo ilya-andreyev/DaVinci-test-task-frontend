@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import { formatDistanceToNow } from 'date-fns';
+import ClockLoader from 'react-spinners/ClockLoader';
 
 import Button from 'components/common/Button';
+import theme from 'theme';
 
 import * as Style from './styled';
 
@@ -25,6 +27,7 @@ const Issue = ({
         <Style.Span>{`Created: ${formatDistanceToNow(Date.parse(createdOn))} ago`}</Style.Span>
       </Style.WrapperInfo>
       <Style.WrapperStatistic>
+        <ClockLoader color={theme.colors.blue2} loading={loading[id]} size={50} />
         {statistic[id].productivity !== null && (
         <>
           <Style.Paragraph>{`Lead time: ${statistic[id].leadTime}`}</Style.Paragraph>

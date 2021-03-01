@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import {
   getAllIssues,
   getLeadTime,
-  getDevelopmentLeadTime,
-  getTestingLeadTime,
   getStabilizationRatio,
   getProductivity,
 } from 'http/getStatistic';
@@ -21,15 +19,11 @@ const Issues = () => {
     try {
       setLoading((oldState) => ({ ...oldState, [id]: true }));
       const [
-        { data: { leadTime } },
-        { data: { developmentLeadTime } },
-        { data: { testingLeadTime } },
+        { data: { leadTime, developmentLeadTime, testingLeadTime } },
         { data: { stabilizationRatio } },
         { data: { productivity } },
       ] = await Promise.all([
         getLeadTime(id),
-        getDevelopmentLeadTime(id),
-        getTestingLeadTime(id),
         getStabilizationRatio(id),
         getProductivity(id),
       ]);

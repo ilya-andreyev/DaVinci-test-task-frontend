@@ -13,6 +13,6 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.blue3};
+  color: ${({ theme }) => theme.colors.blue2};
   font-size: 13px;
 `;
